@@ -88,8 +88,16 @@ GEM
     debug (1.9.2)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    diff-lcs (1.5.1)
     drb (2.2.1)
     erubi (1.12.0)
+    factory_bot (6.4.6)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.4.3)
+      factory_bot (~> 6.4)
+      railties (>= 5.0.0)
+    faker (3.3.1)
+      i18n (>= 1.8.11, < 2)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.5)
@@ -205,6 +213,23 @@ GEM
     reline (0.5.6)
       io-console (~> 0.5)
     rexml (3.2.6)
+    rspec-core (3.13.0)
+      rspec-support (~> 3.13.0)
+    rspec-expectations (3.13.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-mocks (3.13.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-rails (6.1.2)
+      actionpack (>= 6.1)
+      activesupport (>= 6.1)
+      railties (>= 6.1)
+      rspec-core (~> 3.13)
+      rspec-expectations (~> 3.13)
+      rspec-mocks (~> 3.13)
+      rspec-support (~> 3.13)
+    rspec-support (3.13.1)
     rubocop (1.63.5)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
@@ -224,6 +249,8 @@ GEM
       rubocop (>= 1.33.0, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
     ruby-progressbar (1.13.0)
+    shoulda-matchers (6.2.0)
+      activesupport (>= 5.2.0)
     stringio (3.1.0)
     thor (1.3.1)
     timeout (0.4.1)
@@ -247,12 +274,16 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   debug
+  factory_bot_rails
+  faker
   jbuilder
   kaminari
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.3, >= 7.1.3.2)
+  rspec-rails (~> 6.1.0)
   rubocop-rails
+  shoulda-matchers (~> 6.0)
   tzinfo-data
 
 RUBY VERSION
