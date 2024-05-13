@@ -3,6 +3,6 @@
 class Course < ApplicationRecord
   has_many :tutors, dependent: :nullify
 
-  validates :name, presence: true
+  validates :name, :tutors, presence: true
   accepts_nested_attributes_for :tutors
 end

@@ -15,6 +15,7 @@ class Api::V1::CoursesController < Api::V1Controller
   end
 
   private
+
   def create_params
     params.require(:course).permit(:name, tutors_attributes: %i[name email])
   end
